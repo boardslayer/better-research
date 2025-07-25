@@ -6,3 +6,5 @@ Pillow>=10.0.0
 pytesseract>=0.3.10
 markdown>=3.4.0
 requests>=2.31.0
+pyzotero>=1.5.0
+rmapi>=0.0.5
