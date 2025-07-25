@@ -34,6 +34,19 @@ Add this to your `config.json`:
 }
 ```
 
+> **⚠️ SECURITY WARNING**: Never commit your `config.json` file with real API keys and user IDs to version control! 
+> 
+> **Recommended security practices:**
+> - Add `config.json` to your `.gitignore` file
+> - Use environment variables for sensitive credentials
+> - Consider using a `config.sample.json` template for sharing
+> - Use secret management tools in production environments
+> 
+> **Quick fix:** Add this line to your `.gitignore`:
+> ```
+> config.json
+> ```
+
 ### Configuration Options
 
 - **library_id**: Your Zotero user ID or group ID
