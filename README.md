@@ -35,7 +35,7 @@ python workflow_orchestrator.py --steps zotero upload download process
 - [Batch Processing](./docs/BATCH_PROCESSING.md) - OCR and output generation
 - [Configuration](./docs/CONFIG_TEMPLATE.md) - Configuration templates
 
-## TODO
+## TO-DO
 
 - [x] Integrate with Zotero
 - [x] Integrate with Remarkable APIs

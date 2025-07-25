@@ -14,11 +14,13 @@ The orchestrator manages four key steps:
 ## Quick Start
 
 ### Complete Workflow
+
 ```bash
 python workflow_orchestrator.py --full
 ```
 
 ### Specific Steps
+
 ```bash
 # Run only Zotero sync
 python workflow_orchestrator.py --steps zotero
@@ -43,6 +45,7 @@ python workflow_orchestrator.py --steps process
    - Test connection
 
 3. **Install Dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -57,6 +60,7 @@ python workflow_orchestrator.py --steps process
 ### Step 3: Run the Workflow
 
 #### Option A: Complete Automated Workflow
+
 ```bash
 python workflow_orchestrator.py --full
 ```
@@ -170,6 +174,7 @@ better-research/
 ## Output Examples
 
 ### Console Output
+
 ```
 🔬 Research Workflow Orchestrator
 ========================================
@@ -220,16 +225,19 @@ output/
 ### Common Issues
 
 **"No files downloaded from Zotero"**
+
 - Check Zotero API credentials
 - Verify items have `rm_to_sync` tag
 - Ensure items have PDF attachments
 
 **"reMarkable sync failed"**
+
 - Check rmapi installation: `rmapi --help`
 - Verify authentication: `rmapi ls`
 - Check internet connection
 
 **"Batch processing failed"**
+
 - Check OCR engine configuration
 - Verify PDFs are in `read/` folder
 - Check file permissions
