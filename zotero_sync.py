@@ -49,7 +49,7 @@ class ZoteroSync:
         self.zot = zotero.Zotero(self.library_id, self.library_type, self.api_key)
         
         # Setup logging
-        logging.basicConfig(level=logging.INFO)
+        # Setup logger (let application configure logging)
         self.logger = logging.getLogger(__name__)
         
         # Ensure directories exist
@@ -263,7 +263,7 @@ def main():
         # Perform sync
         downloaded_count = sync.sync_to_read_items()
         
-        print(f"\\n✅ Sync complete!")
+        print(f"\n✅ Sync complete!")
         print(f"📥 Downloaded {downloaded_count} new files to '{sync.to_read_folder}'")
         
     except Exception as e:

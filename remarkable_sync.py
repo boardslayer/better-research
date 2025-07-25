@@ -213,7 +213,7 @@ class RemarkableSync:
             
             # Upload the file
             success, _, stderr = self._run_rmapi_command([
-                'put', file_path, f"{self.rm_to_read_folder}/{filename}"
+                'put', file_path, self.rm_to_read_folder
             ])
             
             if success:
