@@ -8,9 +8,10 @@ This module handles synchronization with reMarkable tablet, specifically:
 - Downloads annotated PDFs from reMarkable 'read' folder to local 'read' folder
 - Manages sync state and file organization
 
+
 Requires rmapi to be installed and configured:
-- Install: pip install rmapi
-- Setup: rmapi --help for authentication instructions
+- Install: Download from https://github.com/juruen/rmapi/releases or use `go install github.com/juruen/rmapi@latest`
+- Setup: Run `rmapi` to authenticate with your reMarkable account
 
 """
 
@@ -20,7 +21,7 @@ import logging
 import subprocess
 import tempfile
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 import shutil
 import time
 
@@ -351,13 +352,13 @@ def main():
         # Perform sync
         uploaded, downloaded = sync.full_sync()
         
-        print(f"\\n✅ Sync complete!")
+        print("✅ Sync complete!")
         print(f"📤 Uploaded {uploaded} files to reMarkable")
         print(f"📥 Downloaded {downloaded} annotated files")
         
     except Exception as e:
-        print(f"❌ Sync failed: {e}")
-        print(f"💡 Make sure rmapi is installed and configured")
+        print("❌ Sync failed: {e}")
+        print("💡 Make sure rmapi is installed and configured")
 
 
 if __name__ == "__main__":

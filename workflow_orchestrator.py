@@ -18,8 +18,7 @@ import os
 import json
 import logging
 import argparse
-from pathlib import Path
-from typing import Dict, Optional, Tuple
+from typing import Dict
 import sys
 import time
 
@@ -27,7 +26,7 @@ import time
 try:
     from zotero_sync import ZoteroSync
     from remarkable_sync import RemarkableSync
-    from batch_processor import load_config, ensure_directories, process_all_pdfs
+    from batch_processor import ensure_directories, process_all_pdfs
 except ImportError as e:
     print(f"❌ Import error: {e}")
     print("💡 Make sure all required modules are available")
@@ -247,7 +246,7 @@ class WorkflowOrchestrator:
     
     def _print_workflow_summary(self, results: Dict):
         """Print a summary of workflow results"""
-        print("\\n" + "="*50)
+        print("="*50)
         print("📊 WORKFLOW SUMMARY")
         print("="*50)
         print(f"🔄 Zotero Downloads:      {results['zotero_downloads']}")
@@ -312,7 +311,7 @@ Examples:
             parser.print_help()
             return 1
         
-        print("\\n✅ Workflow completed successfully!")
+        print("✅ Workflow completed successfully!")
         return 0
         
     except Exception as e:

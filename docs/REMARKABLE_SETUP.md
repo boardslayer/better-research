@@ -8,8 +8,9 @@ This guide covers setting up reMarkable integration for the better-research work
 
 [rmapi](https://github.com/ddvk/rmapi) is the command-line tool for interacting with reMarkable tablets.
 
-On MacOS, you can use the following: 
-```bash 
+On MacOS, you can use the following:
+
+```bash
 brew install io41/tap/rmapi
 ```
 
@@ -82,7 +83,7 @@ Add reMarkable settings to your `config.json`:
 
 The sync expects this folder structure on your reMarkable:
 
-```
+```text
 / (root)
 ├── to-read/          # New papers to read and annotate
 └── read/             # Finished papers with annotations
@@ -92,7 +93,7 @@ These folders will be created automatically if they don't exist.
 
 ### Local Structure
 
-```
+```text
 better-research/
 ├── to-read/          # PDFs ready to upload to reMarkable
 ├── read/             # Annotated PDFs downloaded from reMarkable

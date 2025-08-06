@@ -8,11 +8,10 @@ and initial configuration.
 
 """
 
-import os
+
 import sys
 import json
 import subprocess
-import shutil
 from pathlib import Path
 
 def print_header():

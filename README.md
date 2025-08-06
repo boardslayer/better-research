@@ -4,6 +4,26 @@ A comprehensive research workflow tool that integrates Zotero, reMarkable, and O
 
 This tool was mostly written by *Github Copilot* with minor corrections from me. So, I don't know what the license for it should be. You should read the more detailed [README](./docs/README.md) next.
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant WorkflowOrchestrator
+    participant ZoteroSync
+    participant RemarkableSync
+    participant BatchProcessor
+
+    User->>WorkflowOrchestrator: Run workflow (full or steps)
+    WorkflowOrchestrator->>ZoteroSync: Sync PDFs from Zotero
+    ZoteroSync-->>WorkflowOrchestrator: PDFs downloaded to 'to-read'
+    WorkflowOrchestrator->>RemarkableSync: Upload PDFs to reMarkable
+    RemarkableSync-->>WorkflowOrchestrator: PDFs uploaded
+    WorkflowOrchestrator->>RemarkableSync: Download annotated PDFs
+    RemarkableSync-->>WorkflowOrchestrator: Annotated PDFs downloaded to 'read'
+    WorkflowOrchestrator->>BatchProcessor: Process annotations (OCR, extract)
+    BatchProcessor-->>WorkflowOrchestrator: Output markdown/HTML
+    WorkflowOrchestrator-->>User: Print summary/results
+```
+
 ## 🚀 New Features
 
 - **Zotero Integration**: Automatically download tagged papers from your Zotero library
