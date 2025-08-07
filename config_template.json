@@ -1,0 +1,37 @@
+{
+  "ocr_engine": "mathpix",
+  "mathpix": {
+    "app_id": "your_mathpix_app_id_here",
+    "app_key": "your_mathpix_app_key_here"
+  },
+  "tesseract": {
+    "enabled": true,
+    "language": "eng"
+  },
+  "extraction": {
+    "extract_highlights": true,
+    "extract_handwriting": true
+  },
+  "folders": {
+    "input": "read",
+    "output": "output",
+    "images": "output/images",
+    "markdown": "output/markdown",
+    "html": "output/html"
+  },
+  "output": {
+    "generate_html": true,
+    "generate_markdown": true
+  },
+  "image_processing": {
+    "max_size": 1024,
+    "quality": 95
+  },
+    "zotero": {
+    "library_id": "YOUR_USER_ID_HERE",
+    "library_type": "user",
+    "api_key": "YOUR_API_KEY_HERE",
+    "sync_tag": "rm_to_sync",
+    "processed_tag": "rm_processed"
+  }
+}
